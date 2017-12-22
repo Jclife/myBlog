@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="blogDemo.dao.UserDao">
+
+    <!--这个mapper里面的sql语句将缓存到redis中去-->
+    <!--<cache type="blogDemo.utils.RedisCache"/>-->
+
+
+    <select id="selectUser" resultType="blogDemo.model.model.user">
+        SELECT * FROM user WHERE id = 1;
+    </select>
+
+
+</mapper>
